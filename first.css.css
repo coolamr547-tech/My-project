@@ -1,0 +1,149 @@
+/* ===== General Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    border: 3px solid #4CAF50;
+    object-fit: cover;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.project {
+    background-color: #e7f3e7;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+/* ===== Contact Form ===== */
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#contactForm {
+  background-color: black;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+#contactForm.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* helper: hide elements that include .hidden class */
+.hidden { display: none; }
+
+#contactForm input,
+#contactForm textarea {
+  background: white !important;
+  border: 1px solid #ccc !important;
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: black !important;      /* الكتابة هتظهر */
+  font-size: 1rem;
+  
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: #555 !important;       /* لون الـ placeholder */
+}
+
+#contactForm input,
+#contactForm textarea {
+    background: #ffffff !important;
+    color: #000 !important;
+    border: 1px solid #ccc !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+}
